@@ -1,0 +1,11 @@
+.listContainer {
+  display: flex;
+  flex-direction: column;
+
+  height: 90vh;
+}
+
+.list {
+  // justify-content: center;
+  overflow-y: auto;
+}
