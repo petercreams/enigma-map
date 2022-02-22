@@ -19,15 +19,14 @@ import { ObjectDetails } from "./ObjectDetails";
 
 import styles from "./List.module.scss";
 
-const List = ({ objects, setObjects }) => {
-  //   const [objects, setObjects] = useState([]);
-  const [isClicked, setIsClicked] = useState([
-    {
-      car: false,
-      parking: false,
-      poi: false,
-    },
-  ]);
+const List = ({ objects, setObjects, isClicked, setIsClicked }) => {
+//   const [isClicked, setIsClicked] = useState([
+//     {
+//       car: false,
+//       parking: false,
+//       poi: false,
+//     },
+//   ]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
