@@ -1,0 +1,41 @@
+.clusterContainer {
+  position: relative;
+  display: block;
+  background-color: white;
+  width: fit-content;
+  height: auto;
+  min-height: 100%;
+  padding: 0.4rem;
+  border-radius: 50%;
+  z-index: 10;
+
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(45deg, #1975d2, white) border-box;
+  border-radius: 50%;
+  border: 3px solid transparent;
+
+  .count {
+    position: absolute;
+    background-color: #1975d2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -8px;
+    top: -3px;
+    width: 23px;
+    height: 23px;
+
+    border-radius: 50%;
+
+    z-index: 15;
+    color: white;
+    font-weight: bolder;
+    border: 2px solid white;
+  }
+
+  &:hover {
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0.9;
+  }
+}
