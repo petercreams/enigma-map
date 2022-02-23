@@ -6,10 +6,18 @@ import styles from "./Marker.module.scss";
 
 import { Tooltip, Modal, Box, Typography } from "@mui/material";
 
-const Marker = ({ discriminator, name, lat, lng, id, pointCount }) => {
+const Marker = ({ discriminator, name, lat, lng, id, clickedEl }) => {
+  console.log(clickedEl?.getAttribute("lat"), lat);
+
   return (
     <div
-      className={styles.markerContainer}
+      //   className={styles.markerContainer}
+      className={
+        clickedEl?.getAttribute("lat") == lat &&
+        clickedEl?.getAttribute("lng") == lng
+          ? styles.bounce
+          : styles.markerContainer
+      }
       lat={lat}
       lng={lng}
       key={id}
